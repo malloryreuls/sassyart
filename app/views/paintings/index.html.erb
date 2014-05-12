@@ -1,0 +1,37 @@
+<div class="main">
+
+	<h1>Famous Paintings</h1>
+
+	<% @paintings.each do |p| %>
+
+		<div id ="item">
+			<!-- <div class="painting"> -->
+				<p>Painting: <em><%=p.name%></em></p>
+			<!-- </div>
+			<div class="details"> -->
+				<p>Artist: <b><%=p.artist%></b></p>
+				<p>Year: <%=p.year %></p>
+		<!-- 	</div> -->
+		</div>
+
+	<% end %>
+
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> View Paintings<span class="caret"></span>
+  </button>
+ 
+  <ul class="dropdown-menu" role="menu"> 
+  	<% @paintings.each do |p| %>
+	    <li>
+		    <%= link_to p.name, p %>
+		</li>
+
+	    <li class="divider"></li>
+    <% end %>
+  </ul>
+
+</div>
+
+
+</div>

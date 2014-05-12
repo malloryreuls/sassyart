@@ -1,0 +1,12 @@
+<br/>
+<div class="container"> 
+	<div class="jumbotron">
+		<h1> <%= @painting.name %> </h1>
+			<ul>
+				<li><%= @painting.name %></li>
+				<li><%= @painting.artist %></li>
+				<li><%= @painting.year %></li>
+			</ul>
+		<%= link_to "back to paintings", paintings_path, :class => "btn btn-default" %>
+	</div>
+</div>

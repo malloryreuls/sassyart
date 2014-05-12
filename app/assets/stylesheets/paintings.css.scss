@@ -1,0 +1,55 @@
+// Place all the styles related to the paintings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$basewidth: 600px;
+$maincolor: #6f6;
+$mainfont: Helvetica;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body {
+	background-image: url(starrynight.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main {
+	width: $basewidth / 960px * 100%;
+	margin: 0 auto;
+	background: #CCC;
+	opacity:0.6;
+	padding: 40px;
+	font-family: $mainfont;
+	@include border-radius(20px);
+	height: 650px;
+
+/*	.painting {
+		background-color: darken($maincolor, 30%);
+		color: lighten($maincolor, 50%);
+	
+
+	}
+
+	.details {
+		background-color: $maincolor;
+
+	}*/
+
+}
+
+#item {
+	float: left;
+	background-color: #2B43A3;
+	border: 8px solid #BEA318;
+	color: white;
+	width: 200px;
+	padding: 15px;
+	@include border-radius(20px);
+	margin: 10px;
+}
